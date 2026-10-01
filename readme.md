@@ -8,3 +8,10 @@
    You describe the query through the method name, and Spring Data generates the query for you.
 6. Criteria API in Spring Boot
    Criteria API is used to build database queries dynamically using Java code instead of writing SQL/JPQL directly.
+7. Add dependency
+   https://central.sonatype.com/artifact/org.springframework.boot/spring-boot-starter-mongodb-test
+   <dependency>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter-data-mongodb</artifactId>
+   </dependency>
+8. Controller -> Service -> Repository
