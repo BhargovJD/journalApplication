@@ -5,7 +5,6 @@ import com.companyname.journalApp.repository.JournalEntryRepository;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
@@ -31,8 +30,14 @@ public class JournalEntryService {
         return journalEntryRepository.findById(id);
     }
 
-    public void deleteById(ObjectId id){
-       journalEntryRepository.deleteById(id);
+    public boolean deleteById(ObjectId id) {
+
+        if (journalEntryRepository.existsById(id)) {
+            journalEntryRepository.deleteById(id);
+            return true;
+        }
+
+        return false;
     }
 
 }
