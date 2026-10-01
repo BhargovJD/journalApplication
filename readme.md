@@ -15,3 +15,5 @@
    <artifactId>spring-boot-starter-data-mongodb</artifactId>
    </dependency>
 8. Controller -> Service -> Repository
+9. https://projectlombok.org/
+   Never write another getter or equals method again, with one annotation your class has a fully featured builder, Automate your logging variables, and much more.
